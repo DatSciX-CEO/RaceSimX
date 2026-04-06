@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "crates/sim-core",
+    "src-tauri",
+]
+resolver = "2"

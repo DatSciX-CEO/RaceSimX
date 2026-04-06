@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Race Comparison</title>
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Race Comparison</h1>
+      <p class="subtitle">Physics-based drag and roll race simulation</p>
+    </header>
+    <main>
+      <section id="car-editors">
+        <div id="car-a-panel" class="car-panel">
+          <div class="panel-header">
+            <h2>Car A</h2>
+            <div class="panel-controls">
+              <select id="car-a-preset" class="preset-select">
+                <option value="">Custom...</option>
+              </select>
+              <label class="toggle-label">
+                <input type="checkbox" id="car-a-advanced" class="advanced-toggle">
+                <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                Advanced
+              </label>
+            </div>
+          </div>
+          <div id="car-a-form" class="car-form"></div>
+          <div class="panel-actions">
+            <input type="text" id="car-a-filename" class="filename-input" placeholder="config name">
+            <button class="btn-save" id="car-a-save">Save</button>
+            <button class="btn-clear" id="car-a-clear">Clear</button>
+          </div>
+        </div>
+        <div id="car-b-panel" class="car-panel">
+          <div class="panel-header">
+            <h2>Car B</h2>
+            <div class="panel-controls">
+              <select id="car-b-preset" class="preset-select">
+                <option value="">Custom...</option>
+              </select>
+              <label class="toggle-label">
+                <input type="checkbox" id="car-b-advanced" class="advanced-toggle">
+                <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                Advanced
+              </label>
+            </div>
+          </div>
+          <div id="car-b-form" class="car-form"></div>
+          <div class="panel-actions">
+            <input type="text" id="car-b-filename" class="filename-input" placeholder="config name">
+            <button class="btn-save" id="car-b-save">Save</button>
+            <button class="btn-clear" id="car-b-clear">Clear</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="environment-panel" class="env-panel">
+        <div class="panel-header">
+          <h2>Environment</h2>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="env-name">Name</label>
+            <input id="env-name" type="text" placeholder="e.g. Sea Level Standard">
+          </div>
+          <div class="field">
+            <label for="env-air-density">Air Density (kg/m³)</label>
+            <input id="env-air-density" type="number" step="any" placeholder="e.g. 1.225">
+          </div>
+        </div>
+        <div class="panel-actions">
+          <button class="btn-save" id="env-save">Save Environment</button>
+        </div>
+      </section>
+
+      <section id="race-selection">
+        <h2>Race Events</h2>
+        <div id="race-checkboxes" class="race-grid"></div>
+      </section>
+
+      <div class="action-row">
+        <button id="compare-btn">Compare</button>
+      </div>
+
+      <section id="results-section" class="hidden">
+        <h2>Results</h2>
+        <div id="results-table-wrap"></div>
+      </section>
+
+      <section id="assumptions-section" class="hidden">
+        <h2>Data Confidence</h2>
+        <div id="confidence-wrap" class="confidence-row"></div>
+        <div id="assumptions-wrap" class="assumptions-columns"></div>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

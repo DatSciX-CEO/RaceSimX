@@ -1,0 +1,26 @@
+name = "Precision Spec V8 Muscle Car"
+weight_lbs = 3950.0
+hp_peak = 480.0
+driven_wheels = "RWD"
+
+tq_peak = 420.0
+rpm_hp = 7000.0
+rpm_tq = 4600.0
+redline = 7400.0
+
+vehicle_class = "muscle_car"
+
+gears = [3.14, 2.32, 1.51, 1.14, 0.87, 0.66]
+final_drive = 3.55
+shift_time_s = 0.15
+
+cd = 0.35
+frontal_area_sqft = 24.5
+tire_diameter_in = 27.5
+cg_height_in = 20.0
+wheelbase_in = 107.0
+weight_dist_rear_pct = 52.0
+tire_mu = 1.1
+drivetrain_loss_pct = 15.0
+
+launch_rpm = 3500.0

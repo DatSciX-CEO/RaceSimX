@@ -1,0 +1,97 @@
+[simulation]
+time_step_s = 0.005
+max_time_s = 90.0
+aero_wall_accel_threshold = 0.005
+aero_wall_min_speed_ms = 13.4
+
+[engine_defaults]
+idle_rpm = 1000.0
+idle_torque_fraction = 0.5
+overrev_torque_fraction = 0.8
+default_rpm_hp = 6500.0
+rpm_tq_offset_from_hp = 1500.0
+min_rpm_tq = 2000.0
+redline_offset_from_hp = 500.0
+tq_from_hp_multiplier = 0.9
+default_launch_rpm = 3000.0
+
+[chassis_defaults]
+cd = 0.32
+frontal_area_sqft = 23.5
+tire_diameter_in = 27.0
+cg_height_in = 20.0
+wheelbase_in = 110.0
+tire_mu = 1.0
+
+[physics_constants]
+rolling_resistance_crr = 0.015
+rotational_inertia_base = 0.04
+rotational_inertia_gear_factor = 0.0025
+
+[drivetrain.FWD]
+loss_pct = 12.0
+weight_dist_rear_pct = 40.0
+
+[drivetrain.RWD]
+loss_pct = 15.0
+weight_dist_rear_pct = 50.0
+
+[drivetrain.AWD]
+loss_pct = 18.0
+weight_dist_rear_pct = 50.0
+
+[transmission.auto]
+gears = [4.17, 2.34, 1.52, 1.14, 0.87, 0.69]
+final_drive = 3.42
+shift_time_s = 0.15
+
+[transmission.dual_clutch]
+gears = [3.77, 2.27, 1.51, 1.13, 0.87, 0.69, 0.58]
+final_drive = 3.44
+shift_time_s = 0.05
+
+[transmission.manual]
+gears = [3.55, 2.36, 1.63, 1.21, 1.00, 0.83]
+final_drive = 3.55
+shift_time_s = 0.30
+
+[transmission.single_speed]
+gears = [9.0]
+final_drive = 1.0
+shift_time_s = 0.0
+
+[vehicle_class.sports_car]
+cd = 0.30
+frontal_area_sqft = 22.0
+cg_height_in = 18.0
+wheelbase_in = 100.0
+tire_mu = 1.1
+
+[vehicle_class.sedan]
+cd = 0.32
+frontal_area_sqft = 23.5
+cg_height_in = 22.0
+wheelbase_in = 110.0
+tire_mu = 1.0
+
+[vehicle_class.muscle_car]
+cd = 0.36
+frontal_area_sqft = 24.5
+cg_height_in = 20.0
+wheelbase_in = 107.0
+tire_mu = 1.0
+
+[vehicle_class.suv]
+cd = 0.42
+frontal_area_sqft = 30.0
+cg_height_in = 28.0
+wheelbase_in = 115.0
+tire_mu = 0.9
+
+[vehicle_class.ev]
+cd = 0.25
+frontal_area_sqft = 24.0
+cg_height_in = 16.0
+wheelbase_in = 113.0
+tire_mu = 1.0
+drivetrain_loss_pct = 5.0

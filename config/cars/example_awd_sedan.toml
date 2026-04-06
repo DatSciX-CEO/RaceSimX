@@ -1,0 +1,4 @@
+name = "Mystery AWD Turbo Sedan"
+weight_lbs = 3500.0
+hp_peak = 400.0
+driven_wheels = "AWD"
